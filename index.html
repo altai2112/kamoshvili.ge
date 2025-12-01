@@ -6,7 +6,7 @@
     <title>Maxim Kamoshvili</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -18,11 +18,10 @@
             font-family: 'Kufam', sans-serif;
             background-color: #000;
             color: #fff;
-            line-height: 1.7;
+            line-height: 1.6;
             padding: 30px 20px;
-            max-width: 1000px;
+            max-width: 800px;
             margin: 0 auto;
-            letter-spacing: 0.3px;
         }
         
         .container {
@@ -35,104 +34,58 @@
             text-align: center;
             padding-bottom: 30px;
             border-bottom: 1px solid #333;
-            margin-bottom: 10px;
         }
         
         .name-title {
             font-weight: 500;
             font-style: italic;
-            font-size: 4rem;
+            font-size: 3.5rem;
             color: #d4af37;
-            margin-bottom: 5px;
-            letter-spacing: 1.5px;
-        }
-        
-        .subtitle {
-            font-style: italic;
-            color: #aaa;
-            font-size: 1.2rem;
-            font-weight: 400;
+            margin-bottom: 10px;
         }
         
         .content {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             display: flex;
             flex-direction: column;
-            gap: 35px;
+            gap: 25px;
             font-weight: 400;
         }
         
         p {
-            margin-bottom: 20px;
-            text-align: justify;
+            margin-bottom: 15px;
         }
         
         .intro-text {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             line-height: 1.8;
         }
         
-        .photo-gallery {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 35px;
-            margin-top: 50px;
-            padding-top: 50px;
-            border-top: 2px solid #333;
-        }
-        
-        .photo-frame {
-            background-color: #111;
-            padding: 0;
-            border-radius: 10px;
-            width: 100%;
-            text-align: center;
-            border: 1px solid #333;
-            font-family: 'Kufam', sans-serif;
-            overflow: hidden;
-        }
-        
-        .photo-placeholder {
-            width: 100%;
-            height: 350px;
-            background-color: #222;
+        .photos {
+            margin-top: 40px;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 0;
-            overflow: hidden;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .photo-item {
+            width: 100%;
         }
         
         .photo-image {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
             display: block;
+            border-radius: 5px;
+            border: 1px solid #333;
         }
         
         .photo-caption {
             font-style: italic;
             color: #aaa;
-            font-size: 1rem;
-            line-height: 1.5;
-            font-weight: 400;
-            padding: 20px;
-            border-top: 1px solid #333;
-            background-color: #0a0a0a;
-        }
-        
-        .caption-title {
-            font-weight: 500;
-            color: #d4af37;
-            margin-bottom: 5px;
-            font-size: 1.1rem;
-        }
-        
-        .archive-notice {
-            font-size: 0.9rem;
-            color: #888;
-            font-style: italic;
-            margin-top: 5px;
+            font-size: 0.95rem;
+            margin-top: 8px;
+            text-align: center;
         }
         
         .highlight {
@@ -141,93 +94,22 @@
             font-style: italic;
         }
         
-        .italic-text {
-            font-style: italic;
-        }
-        
-        .gallery-title {
-            font-weight: 500;
-            font-style: italic;
-            font-size: 1.8rem;
-            color: #d4af37;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        
-        .gallery-subtitle {
-            text-align: center;
-            color: #aaa;
-            font-style: italic;
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-        }
-        
         footer {
             text-align: center;
-            padding-top: 40px;
+            padding-top: 30px;
             border-top: 1px solid #333;
             color: #777;
-            font-size: 1rem;
-            margin-top: 30px;
-            font-weight: 400;
+            font-size: 0.9rem;
+            margin-top: 20px;
         }
         
-        /* Responsive design */
         @media (min-width: 768px) {
-            .photo-gallery {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .photo-frame:first-child {
-                grid-column: span 2;
-            }
-            
             .name-title {
-                font-size: 5rem;
+                font-size: 4.5rem;
             }
             
             body {
-                padding: 40px 30px;
-            }
-        }
-        
-        @media (min-width: 992px) {
-            .photo-gallery {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-            .photo-frame:first-child {
-                grid-column: span 1;
-            }
-            
-            .name-title {
-                font-size: 5.5rem;
-            }
-            
-            .content {
-                font-size: 1.4rem;
-            }
-            
-            .intro-text {
-                font-size: 1.5rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .name-title {
-                font-size: 3rem;
-            }
-            
-            .content {
-                font-size: 1.1rem;
-            }
-            
-            .intro-text {
-                font-size: 1.2rem;
-            }
-            
-            .photo-placeholder {
-                height: 250px;
+                padding: 40px;
             }
         }
     </style>
@@ -236,7 +118,6 @@
     <div class="container">
         <header>
             <div class="name-title">kamoshvili</div>
-            <div class="subtitle">artist • researcher • conceptualist</div>
         </header>
         
         <div class="content">
@@ -244,48 +125,27 @@
             
             <p>Since 2005, Kamoshvili has worked at academic institutions developing methods for aerospace monitoring of the Earth. He also worked on popular science projects.</p>
             
-            <p class="italic-text">In 2021, due to personal circumstances, he left to live and work in the European Jerusalem of Sarajevo, where he was engaged in research projects and artistic practices.</p>
+            <p>In 2021, due to personal circumstances, he left to live and work in the European Jerusalem of Sarajevo, where he was engaged in research projects and artistic practices.</p>
             
             <p>In collaboration with representatives of European conceptualism, such as Gianfranco Baruchello, Emilio Fantini, and others, Kamoshvili created a number of theoretical and artistic works.</p>
             
             <p>Returning to Moscow, Kamoshvili presented some of the works he created in Europe as part of the exhibition <span class="highlight">"Celebration Celebration."</span></p>
         </div>
         
-        <div class="photo-gallery">
-            <div class="gallery-title">Visual Archive</div>
-            <div class="gallery-subtitle">Photographs from personal collection</div>
-            
-            <div class="photo-frame">
-                <div class="photo-placeholder">
-                    <img src="home.jpeg" alt="The Kamoshvili family home in Tbilisi" class="photo-image" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<div style=\"color:#666; text-align:center; padding:20px; font-family:\'Kufam\', sans-serif; font-style:italic;\">The Kamoshvili family home in Tbilisi<br>(photo from personal archive)</div>';">
-                </div>
-                <div class="photo-caption">
-                    <div class="caption-title">Family Home in Tbilisi</div>
-                    The ancestral house of the Kamoshvili family in Georgia's capital
-                    <div class="archive-notice">From personal archive</div>
-                </div>
+        <div class="photos">
+            <div class="photo-item">
+                <img src="https://altai2112.github.io/kamoshvili.ge/home.jpeg" alt="The Kamoshvili family home in Tbilisi" class="photo-image">
+                <div class="photo-caption">The Kamoshvili family home in Tbilisi (from personal archive)</div>
             </div>
             
-            <div class="photo-frame">
-                <div class="photo-placeholder">
-                    <img src="sarajevo-1.jpeg" alt="Sarajevo view" class="photo-image" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<div style=\"color:#666; text-align:center; padding:20px; font-family:\'Kufam\', sans-serif; font-style:italic;\">View of Sarajevo<br>(photo from personal archive)</div>';">
-                </div>
-                <div class="photo-caption">
-                    <div class="caption-title">Sarajevo Panorama</div>
-                    View of the city known as the European Jerusalem
-                    <div class="archive-notice">From personal archive</div>
-                </div>
+            <div class="photo-item">
+                <img src="https://altai2112.github.io/kamoshvili.ge/sarajevo-1.jpeg" alt="Sarajevo" class="photo-image">
+                <div class="photo-caption">Sarajevo (from personal archive)</div>
             </div>
             
-            <div class="photo-frame">
-                <div class="photo-placeholder">
-                    <img src="sarajevo-2.jpeg" alt="Sarajevo architecture" class="photo-image" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<div style=\"color:#666; text-align:center; padding:20px; font-family:\'Kufam\', sans-serif; font-style:italic;\">Architectural detail in Sarajevo<br>(photo from personal archive)</div>';">
-                </div>
-                <div class="photo-caption">
-                    <div class="caption-title">Architectural Details</div>
-                    The unique blend of Eastern and Western influences in Sarajevo
-                    <div class="archive-notice">From personal archive</div>
-                </div>
+            <div class="photo-item">
+                <img src="https://altai2112.github.io/kamoshvili.ge/sarajevo-2.jpeg" alt="Sarajevo" class="photo-image">
+                <div class="photo-caption">Sarajevo (from personal archive)</div>
             </div>
         </div>
         
@@ -293,25 +153,5 @@
             <p>© 2023 Page about Maxim Kamoshvili. All photographs from personal archive.</p>
         </footer>
     </div>
-    
-    <script>
-        // Add subtle hover effect to photo frames
-        document.addEventListener('DOMContentLoaded', function() {
-            const photoFrames = document.querySelectorAll('.photo-frame');
-            
-            photoFrames.forEach(frame => {
-                frame.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px)';
-                    this.style.transition = 'transform 0.3s ease';
-                    this.style.boxShadow = '0 10px 20px rgba(212, 175, 55, 0.1)';
-                });
-                
-                frame.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = 'none';
-                });
-            });
-        });
-    </script>
 </body>
 </html>
