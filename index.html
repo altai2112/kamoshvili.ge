@@ -1,155 +1,233 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Максим Камошвили</title>
+    <title>Maxim Kamoshvili</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: Georgia, serif;
+            font-family: 'Kufam', sans-serif;
             background-color: #000;
             color: #fff;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 1200px;
+            line-height: 1.7;
+            padding: 30px 20px;
+            max-width: 1000px;
             margin: 0 auto;
+            letter-spacing: 0.3px;
         }
-
+        
         .container {
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 40px;
         }
-
+        
         header {
             text-align: center;
-            padding-bottom: 20px;
+            padding-bottom: 30px;
             border-bottom: 1px solid #333;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: #d4af37;
             margin-bottom: 10px;
         }
-
+        
+        .name-title {
+            font-weight: 500;
+            font-style: italic;
+            font-size: 4rem;
+            color: #d4af37;
+            margin-bottom: 5px;
+            letter-spacing: 1.5px;
+        }
+        
         .subtitle {
             font-style: italic;
             color: #aaa;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            font-weight: 400;
         }
-
+        
         .content {
+            font-size: 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            font-weight: 400;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .intro-text {
+            font-size: 1.4rem;
+            line-height: 1.8;
+        }
+        
+        .photo-gallery {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 30px;
+            gap: 35px;
+            margin-top: 50px;
+            padding-top: 50px;
+            border-top: 2px solid #333;
         }
-
-        .text-section {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .bio-section, .work-section, .sarajevo-section, .collaboration-section, .exhibition-section {
-            background-color: #111;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 4px solid #d4af37;
-        }
-
-        h2 {
-            color: #d4af37;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-        }
-
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-        }
-
-        .image-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
+        
         .photo-frame {
             background-color: #111;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 0;
+            border-radius: 10px;
             width: 100%;
-            max-width: 500px;
             text-align: center;
             border: 1px solid #333;
+            font-family: 'Kufam', sans-serif;
+            overflow: hidden;
         }
-
+        
         .photo-placeholder {
             width: 100%;
-            height: 300px;
+            height: 350px;
             background-color: #222;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 15px;
-            border: 1px dashed #444;
+            margin-bottom: 0;
+            overflow: hidden;
         }
-
+        
+        .photo-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
         .photo-caption {
             font-style: italic;
             color: #aaa;
-            font-size: 0.95rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            font-weight: 400;
+            padding: 20px;
+            border-top: 1px solid #333;
+            background-color: #0a0a0a;
         }
-
+        
+        .caption-title {
+            font-weight: 500;
+            color: #d4af37;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .archive-notice {
+            font-size: 0.9rem;
+            color: #888;
+            font-style: italic;
+            margin-top: 5px;
+        }
+        
         .highlight {
             color: #d4af37;
-            font-weight: bold;
+            font-weight: 500;
+            font-style: italic;
         }
-
+        
+        .italic-text {
+            font-style: italic;
+        }
+        
+        .gallery-title {
+            font-weight: 500;
+            font-style: italic;
+            font-size: 1.8rem;
+            color: #d4af37;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .gallery-subtitle {
+            text-align: center;
+            color: #aaa;
+            font-style: italic;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
         footer {
             text-align: center;
-            padding-top: 20px;
+            padding-top: 40px;
             border-top: 1px solid #333;
             color: #777;
-            font-size: 0.9rem;
-            margin-top: 20px;
+            font-size: 1rem;
+            margin-top: 30px;
+            font-weight: 400;
         }
-
-        /* Адаптивность для планшетов и десктопов */
+        
+        /* Responsive design */
         @media (min-width: 768px) {
-            .content {
-                grid-template-columns: 1fr 1fr;
+            .photo-gallery {
+                grid-template-columns: repeat(2, 1fr);
             }
-
-            .text-section {
+            
+            .photo-frame:first-child {
                 grid-column: span 2;
             }
-
-            h1 {
-                font-size: 3rem;
+            
+            .name-title {
+                font-size: 5rem;
+            }
+            
+            body {
+                padding: 40px 30px;
             }
         }
-
+        
         @media (min-width: 992px) {
+            .photo-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .photo-frame:first-child {
+                grid-column: span 1;
+            }
+            
+            .name-title {
+                font-size: 5.5rem;
+            }
+            
             .content {
-                grid-template-columns: 2fr 1fr;
+                font-size: 1.4rem;
             }
-
-            .text-section {
-                grid-column: 1;
+            
+            .intro-text {
+                font-size: 1.5rem;
             }
-
-            .image-section {
-                grid-column: 2;
-                align-items: flex-start;
+        }
+        
+        @media (max-width: 480px) {
+            .name-title {
+                font-size: 3rem;
+            }
+            
+            .content {
+                font-size: 1.1rem;
+            }
+            
+            .intro-text {
+                font-size: 1.2rem;
+            }
+            
+            .photo-placeholder {
+                height: 250px;
             }
         }
     </style>
@@ -157,55 +235,83 @@
 <body>
     <div class="container">
         <header>
-            <h1>Максим Камошвили</h1>
-            <div class="subtitle">Исследователь, художник, концептуалист</div>
+            <div class="name-title">kamoshvili</div>
+            <div class="subtitle">artist • researcher • conceptualist</div>
         </header>
-
+        
         <div class="content">
-            <div class="text-section">
-                <div class="bio-section">
-                    <h2>Биография</h2>
-                    <p><span class="highlight">Максим Камошвили</span> родился 21 июня 1985 года в роддоме имени Грауэрмана, в семье с грузинскими корнями и традициями.</p>
+            <p class="intro-text"><span class="highlight">Maxim Kamoshvili</span> was born on June 21, 1985, in the Grauerman Maternity Hospital, to a family with Georgian origins and traditions.</p>
+            
+            <p>Since 2005, Kamoshvili has worked at academic institutions developing methods for aerospace monitoring of the Earth. He also worked on popular science projects.</p>
+            
+            <p class="italic-text">In 2021, due to personal circumstances, he left to live and work in the European Jerusalem of Sarajevo, where he was engaged in research projects and artistic practices.</p>
+            
+            <p>In collaboration with representatives of European conceptualism, such as Gianfranco Baruchello, Emilio Fantini, and others, Kamoshvili created a number of theoretical and artistic works.</p>
+            
+            <p>Returning to Moscow, Kamoshvili presented some of the works he created in Europe as part of the exhibition <span class="highlight">"Celebration Celebration."</span></p>
+        </div>
+        
+        <div class="photo-gallery">
+            <div class="gallery-title">Visual Archive</div>
+            <div class="gallery-subtitle">Photographs from personal collection</div>
+            
+            <div class="photo-frame">
+                <div class="photo-placeholder">
+                    <img src="home.jpeg" alt="The Kamoshvili family home in Tbilisi" class="photo-image" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<div style=\"color:#666; text-align:center; padding:20px; font-family:\'Kufam\', sans-serif; font-style:italic;\">The Kamoshvili family home in Tbilisi<br>(photo from personal archive)</div>';">
                 </div>
-
-                <div class="work-section">
-                    <h2>Профессиональная деятельность</h2>
-                    <p>С 2005 года Камошвили работал в академических институтах, разрабатывая методы аэрокосмического мониторинга Земли.</p>
-                    <p>Также он занимался популяризацией науки в рамках научно-популярных проектов.</p>
-                </div>
-
-                <div class="sarajevo-section">
-                    <h2>Период в Сараево</h2>
-                    <p>В 2021 году, в связи с личными обстоятельствами, он переехал жить и работать в европейский Иерусалим — Сараево, где занимался исследовательскими проектами и художественными практиками.</p>
-                </div>
-
-                <div class="collaboration-section">
-                    <h2>Творческое сотрудничество</h2>
-                    <p>В сотрудничестве с представителями европейского концептуализма, такими как Джанфранко Баручелло, Эмилио Фантини и другие, Камошвили создал ряд теоретических и художественных работ.</p>
-                </div>
-
-                <div class="exhibition-section">
-                    <h2>Возвращение в Москву</h2>
-                    <p>Вернувшись в Москву, Камошвили представил некоторые из работ, созданных в Европе, в рамках выставки <span class="highlight">«Celebration Celebration»</span>.</p>
+                <div class="photo-caption">
+                    <div class="caption-title">Family Home in Tbilisi</div>
+                    The ancestral house of the Kamoshvili family in Georgia's capital
+                    <div class="archive-notice">From personal archive</div>
                 </div>
             </div>
-
-            <div class="image-section">
-                <div class="photo-frame">
-                    <div class="photo-placeholder">
-                        <div style="color: #666; text-align: center;">
-                            Дом семьи Камошвили в Тбилиси<br>
-                            (фото из личного архива)
-                        </div>
-                    </div>
-                    <div class="photo-caption">Дом семьи Камошвили в Тбилиси (фото из личного архива)</div>
+            
+            <div class="photo-frame">
+                <div class="photo-placeholder">
+                    <img src="sarajevo-1.jpeg" alt="Sarajevo view" class="photo-image" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<div style=\"color:#666; text-align:center; padding:20px; font-family:\'Kufam\', sans-serif; font-style:italic;\">View of Sarajevo<br>(photo from personal archive)</div>';">
+                </div>
+                <div class="photo-caption">
+                    <div class="caption-title">Sarajevo Panorama</div>
+                    View of the city known as the European Jerusalem
+                    <div class="archive-notice">From personal archive</div>
+                </div>
+            </div>
+            
+            <div class="photo-frame">
+                <div class="photo-placeholder">
+                    <img src="sarajevo-2.jpeg" alt="Sarajevo architecture" class="photo-image" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<div style=\"color:#666; text-align:center; padding:20px; font-family:\'Kufam\', sans-serif; font-style:italic;\">Architectural detail in Sarajevo<br>(photo from personal archive)</div>';">
+                </div>
+                <div class="photo-caption">
+                    <div class="caption-title">Architectural Details</div>
+                    The unique blend of Eastern and Western influences in Sarajevo
+                    <div class="archive-notice">From personal archive</div>
                 </div>
             </div>
         </div>
-
+        
         <footer>
-            <p>© 2023 Страница о Максиме Камошвили. Текст предоставлен для демонстрации.</p>
+            <p>© 2023 Page about Maxim Kamoshvili. All photographs from personal archive.</p>
         </footer>
     </div>
+    
+    <script>
+        // Add subtle hover effect to photo frames
+        document.addEventListener('DOMContentLoaded', function() {
+            const photoFrames = document.querySelectorAll('.photo-frame');
+            
+            photoFrames.forEach(frame => {
+                frame.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.transition = 'transform 0.3s ease';
+                    this.style.boxShadow = '0 10px 20px rgba(212, 175, 55, 0.1)';
+                });
+                
+                frame.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'none';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
