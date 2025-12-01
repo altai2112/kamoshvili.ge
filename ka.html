@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Максим Камошвили</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: #aaa;
+            font-size: 1.1rem;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .text-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .bio-section, .work-section, .sarajevo-section, .collaboration-section, .exhibition-section {
+            background-color: #111;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #d4af37;
+        }
+
+        h2 {
+            color: #d4af37;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .image-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo-frame {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            border: 1px dashed #444;
+        }
+
+        .photo-caption {
+            font-style: italic;
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+
+        .highlight {
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        /* Адаптивность для планшетов и десктопов */
+        @media (min-width: 768px) {
+            .content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .text-section {
+                grid-column: span 2;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .content {
+                grid-template-columns: 2fr 1fr;
+            }
+
+            .text-section {
+                grid-column: 1;
+            }
+
+            .image-section {
+                grid-column: 2;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Максим Камошвили</h1>
+            <div class="subtitle">Исследователь, художник, концептуалист</div>
+        </header>
+
+        <div class="content">
+            <div class="text-section">
+                <div class="bio-section">
+                    <h2>Биография</h2>
+                    <p><span class="highlight">Максим Камошвили</span> родился 21 июня 1985 года в роддоме имени Грауэрмана, в семье с грузинскими корнями и традициями.</p>
+                </div>
+
+                <div class="work-section">
+                    <h2>Профессиональная деятельность</h2>
+                    <p>С 2005 года Камошвили работал в академических институтах, разрабатывая методы аэрокосмического мониторинга Земли.</p>
+                    <p>Также он занимался популяризацией науки в рамках научно-популярных проектов.</p>
+                </div>
+
+                <div class="sarajevo-section">
+                    <h2>Период в Сараево</h2>
+                    <p>В 2021 году, в связи с личными обстоятельствами, он переехал жить и работать в европейский Иерусалим — Сараево, где занимался исследовательскими проектами и художественными практиками.</p>
+                </div>
+
+                <div class="collaboration-section">
+                    <h2>Творческое сотрудничество</h2>
+                    <p>В сотрудничестве с представителями европейского концептуализма, такими как Джанфранко Баручелло, Эмилио Фантини и другие, Камошвили создал ряд теоретических и художественных работ.</p>
+                </div>
+
+                <div class="exhibition-section">
+                    <h2>Возвращение в Москву</h2>
+                    <p>Вернувшись в Москву, Камошвили представил некоторые из работ, созданных в Европе, в рамках выставки <span class="highlight">«Celebration Celebration»</span>.</p>
+                </div>
+            </div>
+
+            <div class="image-section">
+                <div class="photo-frame">
+                    <div class="photo-placeholder">
+                        <div style="color: #666; text-align: center;">
+                            Дом семьи Камошвили в Тбилиси<br>
+                            (фото из личного архива)
+                        </div>
+                    </div>
+                    <div class="photo-caption">Дом семьи Камошвили в Тбилиси (фото из личного архива)</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2023 Страница о Максиме Камошвили. Текст предоставлен для демонстрации.</p>
+        </footer>
+    </div>
+</body>
+</html>
